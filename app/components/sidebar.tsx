@@ -155,11 +155,9 @@ export function SideBar(props: { className?: string }) {
     >
       <div className={styles["sidebar-header"]} data-tauri-drag-region>
         <div className={styles["sidebar-title"]} data-tauri-drag-region>
-          ChatGPT Next
+          智能文案机器人
         </div>
-        <div className={styles["sidebar-sub-title"]}>
-          Build your own AI assistant.
-        </div>
+        <div className={styles["sidebar-sub-title"]}>构建你自己的智能助手</div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
         </div>
@@ -171,11 +169,12 @@ export function SideBar(props: { className?: string }) {
           text={shouldNarrow ? undefined : Locale.Mask.Name}
           className={styles["sidebar-bar-button"]}
           onClick={() => {
-            if (config.dontShowMaskSplashScreen !== true) {
-              navigate(Path.NewChat, { state: { fromHome: true } });
-            } else {
-              navigate(Path.Masks, { state: { fromHome: true } });
-            }
+            // if (config.dontShowMaskSplashScreen !== true) {
+            //   navigate(Path.NewChat, { state: { fromHome: true } });
+            // } else {
+            //   navigate(Path.Masks, { state: { fromHome: true } });
+            // }
+            navigate(Path.Masks, { state: { fromHome: true } });
           }}
           shadow
         />
@@ -211,23 +210,28 @@ export function SideBar(props: { className?: string }) {
               }}
             />
           </div>
-          <div className={styles["sidebar-action"]}>
+          {/* <div className={styles["sidebar-action"]}>
             <Link to={Path.Settings}>
               <IconButton icon={<SettingsIcon />} shadow />
             </Link>
-          </div>
+          </div> */}
         </div>
         <div>
           <IconButton
             icon={<AddIcon />}
             text={shouldNarrow ? undefined : Locale.Home.NewChat}
             onClick={() => {
-              if (config.dontShowMaskSplashScreen) {
+              //navigate(Path.Masks);
+              // if (config.dontShowMaskSplashScreen) {
+              //   chatStore.newSession();
+              //   navigate(Path.Chat);
+              // } else {
+              //   navigate(Path.NewChat);
+              // }
+              setTimeout(() => {
                 chatStore.newSession();
                 navigate(Path.Chat);
-              } else {
-                navigate(Path.NewChat);
-              }
+              }, 10);
             }}
             shadow
           />

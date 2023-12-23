@@ -374,11 +374,11 @@ const cn = {
     Sysmessage: "你是一个助手",
   },
   Mask: {
-    Name: "面具",
+    Name: "文案角色",
     Page: {
-      Title: "预设角色面具",
+      Title: "预设角色",
       SubTitle: (count: number) => `${count} 个预设角色定义`,
-      Search: "搜索角色面具",
+      Search: "搜索角色",
       Create: "新建",
     },
     Item: {
@@ -441,9 +441,9 @@ const cn = {
     Config: "配置",
   },
   Exporter: {
-    Description : {
-      Title: "只有清除上下文之后的消息会被展示"
-    },  
+    Description: {
+      Title: "只有清除上下文之后的消息会被展示",
+    },
     Model: "模型",
     Messages: "消息",
     Topic: "主题",

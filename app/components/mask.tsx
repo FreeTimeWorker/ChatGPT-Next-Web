@@ -453,7 +453,7 @@ export function MaskPage() {
           </div>
 
           <div className="window-actions">
-            <div className="window-action-button">
+            {/* <div className="window-action-button">
               <IconButton
                 icon={<DownloadIcon />}
                 bordered
@@ -468,7 +468,7 @@ export function MaskPage() {
                 bordered
                 onClick={() => importFromFile()}
               />
-            </div>
+            </div> */}
             <div className="window-action-button">
               <IconButton
                 icon={<CloseIcon />}
@@ -480,7 +480,7 @@ export function MaskPage() {
         </div>
 
         <div className={styles["mask-page-body"]}>
-          <div className={styles["mask-filter"]}>
+          {/* <div className={styles["mask-filter"]}>
             <input
               type="text"
               className={styles["search-bar"]}
@@ -520,7 +520,7 @@ export function MaskPage() {
                 setEditingMaskId(createdMask.id);
               }}
             />
-          </div>
+          </div> */}
 
           <div>
             {masks.map((m) => (
